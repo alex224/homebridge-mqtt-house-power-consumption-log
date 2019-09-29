@@ -50,7 +50,7 @@ function MqttPowerConsumptionAccessory(log, config) {
 	this.topic= config["topic"];
 	this.loggingService =  new FakeGatoHistoryService("energy", this, { storage: 'fs' });
 	this.totalPowerResetBy = parseInt(config["totalPowerResetBy"]) || ""; // "month", "year", "" - never
-	this.filename = this.topic.replace('/', '-');
+	this.filename = this.topic.replace(/\//g, '_');
 	this.savePeriod = parseInt(config["savePeriod"]) || 15; // in minutes.
 	this.savePeriod = this.savePeriod <= 0 ? 0 : this.savePeriod < 5 ? 5 : this.savePeriod; // min. period 5 minutes
 	this.pathToSave = config["pathToSave"] || false;
