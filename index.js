@@ -277,7 +277,7 @@ function MqttPowerConsumptionAccessory(log, config) {
 						that.lastToSave.lastTimeStamp = new Date().getTime();
 						that.fs.writeFile(that.pathToSave + that.filename + "_powerTMP.txt", JSON.stringify(that.lastToSave), "utf8", function(err) {
 							if (err) {
-								that.log("Problem with save _powerTMP.txt file");
+								that.log("Problem with save _powerTMP.txt file " + JSON.stringify(err));
 							}
 						});
 					} else {
@@ -293,7 +293,7 @@ function MqttPowerConsumptionAccessory(log, config) {
 							that.lastToSave.lastTimeStamp = new Date().getTime();
 							that.fs.writeFile(that.pathToSave + that.filename + "_powerTMP.txt", JSON.stringify(that.lastToSave), "utf8", function(err) {
 								if (err) {
-									that.log("Problem with save _powerTMP.txt file");
+									that.log("Problem with save _powerTMP.txt file " + JSON.stringify(err));
 								}
 							});
 						}
