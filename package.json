@@ -1,0 +1,44 @@
+{
+  "name": "homebridge-mqtt-house-power-consumption-log",
+  "version": "0.9.4",
+  "description": "Plugin to HomeBridge for power consumption device which receives the current used watts as a mqqt message.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex224/homebridge-mqtt-house-power-consumption-log.git"
+  },
+  "dependencies": {
+    "mqtt": ">=1.12.0",
+    "fakegato-history": "^0.5.3",
+    "graceful-fs": ">=0.0.1",
+    "node-schedule": ">=1.1.0"
+  },
+  "engines": {
+    "homebridge": ">=0.2.0",
+    "node": ">4.0.0"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "homekit",
+    "sonoff",
+    "itead",
+    "tasmota",
+    "Sonoff-Tasmota",
+    "Pow",
+    "Sonoff Pow",
+    "Elgato",
+    "Eve",
+    "Energy",
+    "power",
+    "log",
+    "history",
+    "switch"
+  ],
+  "author": "Alexander Heinze",
+  "license": "MIT",
+  "homepage": "https://github.com/alex224/homebridge-mqtt-house-power-consumption-log#readme"
+}

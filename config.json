@@ -1,0 +1,35 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+    
+    "description": "This is an example configuration file. You can use this as a template for creating your own configuration file.",
+
+    "platforms": [],
+	
+	"accessories": [
+		{
+			"accessory": "homebridge-mqtt-house-power-consumption-log",
+
+			"name": "Hausstrom",
+		
+			"url": "mqtt://MQTT-HOST-NAME-OR-IP",
+			"username": "MQTT USER NAME",
+			"password": "MQTT PASSWORD",
+
+			"topic": "/home/powerusage/stats",
+			
+			"totalPowerResetBy": "month",
+		
+			"pathToSave":"/Users/alex/Dev/NodeJS/homebridge-mqtt-house-power-consumption-log/testlogs",
+			"savePeriod": "15",
+				
+			"manufacturer": "bitkiller",
+			"model": "manual power measure",
+			"serialNumberMAC": "bitkiller-hausstrom"
+		}
+	]
+}
